@@ -44,7 +44,8 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         EXCLUDE_REPOS: ${{ secrets.EXCLUDE_REPOS }}
         EXCLUDE_LANGS: ${{ secrets.EXCLUDE_LANGS }}
-        EXCLUDE_PRIVATE: "false"
+        EXCLUDE_PRIVATE: "false" # Also count private repos
+        EXCLUDE_FORKED_REPOS: "true" # Do not count forked repos, that's just inflating all numbers artifically
         SILENT: "true"
         # TODO: Remove this when they get their API working again
         # https://github.com/orgs/community/discussions/192970
